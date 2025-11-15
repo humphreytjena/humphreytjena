@@ -125,6 +125,19 @@
     <p>Full-stack developer • Digital artisan • Storyteller</p>
   </header>
 
+  <!-- Tech Icons Grid -->
+  <section id="skills" style="max-width:1000px; margin:40px auto; text-align:center;">
+    <h2>Tech Stack</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(120px,1fr)); gap:25px; margin-top:30px;">
+      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="60" /><p>PHP</p></div>
+      <div><img src="https://github.com/devicons/devicon/tree/v2.17.0/icons/laravel/laravel-plain.svg" width="60" /><p>Laravel</p></div>
+      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60" /><p>JavaScript</p></div>
+      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="60" /><p>MySQL</p></div>
+      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="60" /><p>HTML5</p></div>
+      <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="60" /><p>CSS3</p></div>
+    </div>
+  </section>
+
   <!-- Badges -->
   <section style="text-align:center; margin-top:40px;">
     <img src="https://img.shields.io/badge/Language-PHP-blue" />
@@ -144,8 +157,7 @@
   <section id="projects">
     <h2>Featured Preview</h2>
     <img src="preview.png" alt="Site Preview" style="width:100%; border-radius:12px; margin-bottom:40px; box-shadow:0 8px 25px rgba(0,0,0,0.45);" />
-
-    <h2>Projects & Interests</h2>
+    
     <h2>Projects & Interests</h2>
     <div class="cards">
       <div class="card">
@@ -179,6 +191,12 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <!-- GSAP Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    gsap.from('h2', { opacity:0, y:20, duration:0.6, stagger:0.2 });
+    gsap.from('.card', { opacity:0, y:25, duration:0.8, stagger:0.15 });
   </script>
 </body>
 </html>
