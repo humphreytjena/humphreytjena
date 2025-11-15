@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Humphrey T. Jena | Developer & Digital Artisan</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-light: #1e293b;
+      --card: #162033;
+      --text: #e2e8f0;
+      --accent: #22d3ee;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 70px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header p {
+      opacity: 0.7;
+      margin-top: 8px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background: var(--bg-light);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .pulse {
+      animation: pulse 2.5s infinite;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      opacity: 0.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);} 
+      to { opacity: 1; transform: translateY(0);} 
+    }
+
+    @keyframes pulse {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#connect">Contact</a>
+  </nav>
+
+  <header>
+    <h1 class="pulse">Hey, I'm Humphrey Tafadzwa Jena</h1>
+    <p>Full-stack developer • Digital artisan • Storyteller</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I create systems that promote transparency, accountability, and meaningful impact.
+      My work blends tech, creativity, and human-centered design.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects & Interests</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>GrantManager</h3>
+        <p>Smart NGO grant tracking & accountability workflows.</p>
+      </div>
+      <div class="card">
+        <h3>POS Systems</h3>
+        <p>Inventory & sales for Zimbabwean SMEs.</p>
+      </div>
+      <div class="card">
+        <h3>Double-entry Accounting</h3>
+        <p>Tools for requisitions & financial control.</p>
+      </div>
+      <div class="card">
+        <h3>Media & Production</h3>
+        <p>Creative workflows for churches and small studios.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect">
+    <h2>Let's Connect</h2>
+    <p>Website: <a href="https://htjena.co.zw">htjena.co.zw</a></p>
+    <p>Email: humphreytjena@gmail.com</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Humphrey T. Jena — Interactive GitHub Site
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
